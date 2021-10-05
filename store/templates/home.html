@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="row row-cols-1 row-cols-md-3">
+    {% for product in products %}
+    <div class="col mb-4">
+        <div class="card">
+            <img src="{{product.image.url}}" alt="" srcset="">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">{{product.price |floatformat:0}}Rwf</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock content %}
